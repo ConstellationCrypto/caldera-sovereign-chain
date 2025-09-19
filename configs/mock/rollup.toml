@@ -24,7 +24,7 @@ kernel_commit_concurrency = 2
 # Run pruning once every 100_000 blocks. Prune any keys more than 100 versions old
 pruner_block_interval = 100_000
 pruner_versions_to_keep = 100
-state_cache_size = 20000000000
+state_cache_size = 10000000000
 
 # We define the rollup's genesis to occur at block number `start_height`. The rollup will ignore
 # any blocks before this height
@@ -72,6 +72,6 @@ disable_state_root_consistency_checks = true
 # "None" - Shutdown the sequencer instead of attempting recovery (default)
 # "TryToSave" - Attempt to recover by flushing batches and catching up with the chain
 recovery_strategy = "TryToSave"
-batch_execution_time_limit_millis = 6000 # This should be adjusted depending on the DA layer's block times
+batch_execution_time_limit_millis = 3000 # This should be adjusted depending on the DA layer's block times
 postgres_connection_string="postgres://postgres:gtesequencerdb@localhost:5432/gte"
 ideal_lag_behind_finalized_slot = 1
