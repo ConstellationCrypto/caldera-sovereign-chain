@@ -3,7 +3,7 @@
 use sov_address::{EthereumAddress, FromVmAddress};
 use sov_evm::EvmAuthenticatorInput;
 use sov_hyperlane_integration::HyperlaneAddress;
-use sov_modules_api::capabilities::{TransactionAuthenticator};
+use sov_modules_api::capabilities::TransactionAuthenticator;
 #[cfg(feature = "native")]
 use sov_modules_api::prelude::*;
 use sov_modules_api::OperatingMode;

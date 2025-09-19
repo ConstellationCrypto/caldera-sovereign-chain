@@ -5,6 +5,7 @@
 //!   2. Add the module to the `Runtime` below
 //!   3. Update `genesis.json` with any additional data required by your new module
 
+use sov_address::{EthereumAddress, FromVmAddress};
 use sov_hyperlane_integration::{
     warp::Warp, HyperlaneAddress, InterchainGasPaymaster, Mailbox as RawMailbox, MerkleTreeHook,
 };
@@ -12,7 +13,6 @@ use sov_hyperlane_integration::{
 use sov_modules_api::macros::{expose_rpc, CliWallet};
 use sov_modules_api::prelude::*;
 use sov_modules_api::{DispatchCall, Event, Genesis, Hooks, MessageCodec, Spec};
-use sov_address::{EthereumAddress, FromVmAddress};
 
 pub type Mailbox<S> = RawMailbox<S, Warp<S>>;
 

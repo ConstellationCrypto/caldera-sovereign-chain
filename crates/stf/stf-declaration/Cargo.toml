@@ -67,7 +67,9 @@ native = [
 	"sov-paymaster/native",
 	"sov-hyperlane-integration/native",
 	"sov-operator-incentives/native",
-	"sov-revenue-share/native"
+	"sov-revenue-share/native",
+	"sov-address/native",
+	"sov-evm/native"
 ]
 bench = [
     "sov-modules-api/bench",

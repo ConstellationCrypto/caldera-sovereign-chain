@@ -1,10 +1,12 @@
 //! This is a technical only module to forward all necessary implementations to inner, non-authenticated Runtime
+use sov_address::{EthereumAddress, FromVmAddress};
 use sov_capabilities::StandardProvenRollupCapabilities as StandardCapabilities;
 use sov_evm::{EthereumAuthenticator, EvmAuthenticatorInput};
 use sov_hyperlane_integration::HyperlaneAddress;
 use sov_kernels::soft_confirmations::SoftConfirmationsKernel;
 #[cfg(feature = "native")]
 use sov_modules_api::capabilities::KernelWithSlotMapping;
+use sov_modules_api::capabilities::TransactionAuthenticator;
 use sov_modules_api::capabilities::{Guard, HasCapabilities, HasKernel};
 use sov_modules_api::{prelude::*, RawTx};
 use sov_modules_api::{
@@ -13,8 +15,6 @@ use sov_modules_api::{
 };
 use sov_modules_api::{ModuleError, ModuleId, ModuleInfo, NestedEnumUtils};
 use sov_rollup_interface::da::DaSpec;
-use sov_address::{EthereumAddress, FromVmAddress};
-use sov_modules_api::capabilities::TransactionAuthenticator;
 
 use crate::Runtime;
 use stf_starter_declaration::GenesisConfig;

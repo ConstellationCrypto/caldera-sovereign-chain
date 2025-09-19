@@ -9,8 +9,8 @@ use sov_hyperlane_integration::HyperlaneAddress;
 use sov_mock_zkvm::MockCodeCommitment;
 use sov_modules_api::configurable_spec::ConfigurableSpec;
 use sov_modules_api::rest::StateUpdateReceiver;
-use sov_modules_api::{NodeEndpoints, Spec};
 use sov_modules_api::ZkVerifier;
+use sov_modules_api::{NodeEndpoints, Spec};
 use sov_modules_rollup_blueprint::pluggable_traits::PluggableSpec;
 use sov_modules_rollup_blueprint::proof_sender::SovApiProofSender;
 use sov_modules_rollup_blueprint::{FullNodeBlueprint, RollupBlueprint, SequencerCreationReceipt};
@@ -18,7 +18,7 @@ use sov_modules_rollup_blueprint::{FullNodeBlueprint, RollupBlueprint, Sequencer
 use sov_rollup_interface::execution_mode::Native;
 use sov_rollup_interface::node::SyncStatus;
 use sov_rollup_interface::zk::aggregated_proof::CodeCommitment;
-use sov_sequencer::{ProofBlobSender, Sequencer};
+use sov_sequencer::{ProofBlobSender, SeqConfigExtension, Sequencer};
 use sov_state::nomt::prover_storage::NomtProverStorage;
 use sov_state::DefaultStorageSpec;
 use sov_state::Storage;
@@ -57,7 +57,8 @@ pub struct StarterRollup<M> {
 impl RollupBlueprint<Native> for StarterRollup<Native>
 where
     EthSpec<DaSpec, InnerZkvm, OuterZkvm>: PluggableSpec,
-    <EthSpec<DaSpec, InnerZkvm, OuterZkvm> as Spec>::Address: HyperlaneAddress + FromVmAddress<EthereumAddress>,
+    <EthSpec<DaSpec, InnerZkvm, OuterZkvm> as Spec>::Address:
+        HyperlaneAddress + FromVmAddress<EthereumAddress>,
 {
     type Spec = EthSpec<DaSpec, InnerZkvm, OuterZkvm>;
     type Runtime = Runtime<Self::Spec>;
@@ -144,7 +145,11 @@ impl FullNodeBlueprint<Native> for StarterRollup<Native> {
     where
         Seq: Sequencer<Spec = Self::Spec, Rt = Self::Runtime, Da = Self::DaService>,
     {
-        let eth_rpc_config = sov_ethereum::EthRpcConfig { };
+        let eth_rpc_config = sov_ethereum::EthRpcConfig {
+            extension: SeqConfigExtension {
+                max_log_limit: 20_000,
+            },
+        };
 
         Ok(NodeEndpoints {
             jsonrpsee_module: sov_ethereum::get_ethereum_rpc(eth_rpc_config, sequencer)
