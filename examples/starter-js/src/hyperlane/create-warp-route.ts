@@ -1,13 +1,13 @@
-import { RuntimeCall } from "./types";
+import { RuntimeCall } from "../types";
+import {minterAddress, SOLANA_TESTNET_DOMAIN} from "./consts";
 
 // An example of a call to register a warp route.
 export const createWarpRoute: RuntimeCall = {
   warp: {
-    Register: {
+    register: {
       // The admin can modify the ISM (aka. trusted relayer/validators)
       admin: {
-        InsecureOwner:
-          "0x9b08ce57a93751aE790698A2C9ebc76A78F23E25",
+        InsecureOwner: minterAddress,
       },
       ism: {
         // Initially, trust the relayer rather than using an additional validator set for *inbound* messages
@@ -27,7 +27,7 @@ export const createWarpRoute: RuntimeCall = {
       },
       remote_routers: [
         [
-          1399811150, // Solana testnet's chain ID
+          SOLANA_TESTNET_DOMAIN,
           "0x264ae4d8bb90248557e7e039afaf384b64fbc821e56f45ebb524d74dfe8cc30d",
         ],
       ],
