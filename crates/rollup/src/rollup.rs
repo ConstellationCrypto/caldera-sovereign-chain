@@ -149,6 +149,7 @@ impl FullNodeBlueprint<Native> for StarterRollup<Native> {
             extension: SeqConfigExtension {
                 max_log_limit: 20_000,
             },
+            buffer_raw_txs: true,
         };
 
         Ok(NodeEndpoints {
