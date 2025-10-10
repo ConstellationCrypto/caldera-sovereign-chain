@@ -2585,6 +2585,7 @@ checksum = "defc4c55412d89136f966bbb339008b474350e5e6e78d2714439c386b3137a03"
 [[package]]
 name = "nearly-linear"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 
 [[package]]
 name = "nearly-linear"
@@ -4394,19 +4395,21 @@ dependencies = [
 [[package]]
 name = "sov-accounts"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "schemars 0.8.21",
  "serde",
  "serde_with",
- "sov-modules-api 0.3.0",
- "sov-state 0.3.0",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
 ]
 
 [[package]]
 name = "sov-address"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "alloy-primitives",
  "anyhow",
@@ -4417,8 +4420,8 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.10.9",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
 ]
 
 [[package]]
@@ -4442,18 +4445,19 @@ dependencies = [
 [[package]]
 name = "sov-attester-incentives"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "derivative",
  "schemars 0.8.21",
  "serde",
- "sov-address 0.3.0",
- "sov-bank 0.3.0",
- "sov-chain-state 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-state 0.3.0",
+ "sov-address 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-chain-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
  "tracing",
 ]
@@ -4461,15 +4465,16 @@ dependencies = [
 [[package]]
 name = "sov-bank"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "derive_more 1.0.0",
  "schemars 0.8.21",
  "serde",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-state 0.3.0",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "strum 0.26.3",
  "thiserror 1.0.65",
  "tracing",
@@ -4496,6 +4501,7 @@ dependencies = [
 [[package]]
 name = "sov-blob-storage"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
@@ -4503,12 +4509,12 @@ dependencies = [
  "hex",
  "schemars 0.8.21",
  "serde",
- "sov-bank 0.3.0",
- "sov-chain-state 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-sequencer-registry 0.3.0",
- "sov-state 0.3.0",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-chain-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-sequencer-registry 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "tracing",
 ]
 
@@ -4535,36 +4541,39 @@ dependencies = [
 [[package]]
 name = "sov-build"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "serde",
  "serde_json",
- "sov-modules-api 0.3.0",
- "sov-universal-wallet 0.1.0",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-universal-wallet 0.1.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
 ]
 
 [[package]]
 name = "sov-capabilities"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "sov-accounts",
  "sov-attester-incentives",
- "sov-bank 0.3.0",
- "sov-modules-api 0.3.0",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-operator-incentives",
  "sov-paymaster",
  "sov-prover-incentives",
- "sov-rollup-interface 0.3.0",
- "sov-sequencer-registry 0.3.0",
- "sov-state 0.3.0",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-sequencer-registry 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-uniqueness",
 ]
 
 [[package]]
 name = "sov-celestia-adapter"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -4578,9 +4587,9 @@ dependencies = [
  "schemars 0.8.21",
  "serde",
  "serde_json",
- "sov-metrics 0.3.0",
- "sov-modules-macros 0.3.0",
- "sov-rollup-interface 0.3.0",
+ "sov-metrics 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-macros 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "tendermint",
  "tendermint-proto",
  "thiserror 1.0.65",
@@ -4616,15 +4625,16 @@ dependencies = [
 [[package]]
 name = "sov-chain-state"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "derivative",
  "schemars 0.8.21",
  "serde",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-state 0.3.0",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
  "tracing",
 ]
@@ -4669,6 +4679,7 @@ dependencies = [
 [[package]]
 name = "sov-evm"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "alloy-consensus",
  "alloy-eips",
@@ -4689,16 +4700,16 @@ dependencies = [
  "schemars 0.8.21",
  "serde",
  "serde_with",
- "sov-address 0.3.0",
- "sov-bank 0.3.0",
- "sov-chain-state 0.3.0",
- "sov-kernels 0.3.0",
- "sov-metrics 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-state 0.3.0",
+ "sov-address 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-chain-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-kernels 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-metrics 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-uniqueness",
- "sov-universal-wallet 0.1.0",
+ "sov-universal-wallet 0.1.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
  "tracing",
 ]
@@ -4706,6 +4717,7 @@ dependencies = [
 [[package]]
 name = "sov-hyperlane-integration"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
@@ -4716,10 +4728,10 @@ dependencies = [
  "serde",
  "serde_yaml",
  "sha3",
- "sov-address 0.3.0",
- "sov-bank 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-state 0.3.0",
+ "sov-address 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "strum 0.26.3",
  "tracing",
 ]
@@ -4727,13 +4739,14 @@ dependencies = [
 [[package]]
 name = "sov-kernels"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
- "sov-blob-storage 0.3.0",
- "sov-chain-state 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-state 0.3.0",
+ "sov-blob-storage 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-chain-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
 ]
 
 [[package]]
@@ -4752,11 +4765,12 @@ dependencies = [
 [[package]]
 name = "sov-metrics"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "derive-new",
  "serde",
- "sov-rollup-interface 0.3.0",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
 ]
 
 [[package]]
@@ -4776,6 +4790,7 @@ dependencies = [
 [[package]]
 name = "sov-mock-zkvm"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "bincode",
@@ -4786,7 +4801,7 @@ dependencies = [
  "schemars 0.8.21",
  "serde",
  "sha2 0.10.9",
- "sov-rollup-interface 0.3.0",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
 ]
 
@@ -4811,6 +4826,7 @@ dependencies = [
 [[package]]
 name = "sov-modules-api"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "alloy-eips",
  "alloy-primitives",
@@ -4823,16 +4839,16 @@ dependencies = [
  "derive_more 1.0.0",
  "digest 0.10.7",
  "hex",
- "nearly-linear 0.3.0",
+ "nearly-linear 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "schemars 0.8.21",
  "serde",
  "serde_json",
  "sha2 0.10.9",
- "sov-metrics 0.3.0",
- "sov-modules-macros 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-state 0.3.0",
- "sov-universal-wallet 0.1.0",
+ "sov-metrics 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-macros 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-universal-wallet 0.1.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "strum 0.26.3",
  "thiserror 1.0.65",
  "toml",
@@ -4876,6 +4892,7 @@ dependencies = [
 [[package]]
 name = "sov-modules-macros"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "bech32",
@@ -4888,8 +4905,8 @@ dependencies = [
  "proc-macro2",
  "quote",
  "serde",
- "sov-metrics 0.3.0",
- "sov-universal-wallet-macro-helpers 0.1.0",
+ "sov-metrics 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-universal-wallet-macro-helpers 0.1.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "syn 2.0.106",
  "toml",
 ]
@@ -4919,16 +4936,17 @@ dependencies = [
 [[package]]
 name = "sov-modules-stf-blueprint"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "hex",
  "schemars 0.8.21",
  "serde",
- "sov-metrics 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-state 0.3.0",
+ "sov-metrics 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
  "tracing",
 ]
@@ -4954,15 +4972,16 @@ dependencies = [
 [[package]]
 name = "sov-operator-incentives"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "derive_more 1.0.0",
  "schemars 0.8.21",
  "serde",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-state 0.3.0",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "strum 0.26.3",
  "thiserror 1.0.65",
  "tracing",
@@ -4971,6 +4990,7 @@ dependencies = [
 [[package]]
 name = "sov-paymaster"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "bcs",
@@ -4979,27 +4999,28 @@ dependencies = [
  "derive_more 1.0.0",
  "schemars 0.8.21",
  "serde",
- "sov-bank 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-state 0.3.0",
- "sov-universal-wallet 0.1.0",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-universal-wallet 0.1.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "tracing",
 ]
 
 [[package]]
 name = "sov-prover-incentives"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "derive_more 1.0.0",
  "schemars 0.8.21",
  "serde",
- "sov-bank 0.3.0",
- "sov-chain-state 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-rollup-interface 0.3.0",
- "sov-state 0.3.0",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-chain-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
  "tracing",
 ]
@@ -5007,14 +5028,15 @@ dependencies = [
 [[package]]
 name = "sov-revenue-share"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "schemars 0.8.21",
  "serde",
- "sov-bank 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-sequencer-registry 0.3.0",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-sequencer-registry 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
 ]
 
@@ -5046,6 +5068,7 @@ dependencies = [
 [[package]]
 name = "sov-rollup-interface"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -5057,7 +5080,7 @@ dependencies = [
  "schemars 0.8.21",
  "serde",
  "serde_json",
- "sov-universal-wallet 0.1.0",
+ "sov-universal-wallet 0.1.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
 ]
 
@@ -5083,14 +5106,15 @@ dependencies = [
 [[package]]
 name = "sov-sequencer-registry"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "schemars 0.8.21",
  "serde",
- "sov-bank 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-state 0.3.0",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
  "tracing",
 ]
@@ -5114,6 +5138,7 @@ dependencies = [
 [[package]]
 name = "sov-state"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "bcs",
@@ -5126,9 +5151,9 @@ dependencies = [
  "serde",
  "serde-big-array",
  "serde_with",
- "sov-metrics 0.3.0",
- "sov-modules-macros 0.3.0",
- "sov-rollup-interface 0.3.0",
+ "sov-metrics 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-macros 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
 ]
 
 [[package]]
@@ -5155,18 +5180,20 @@ dependencies = [
 [[package]]
 name = "sov-uniqueness"
 version = "0.3.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "anyhow",
  "borsh",
  "schemars 0.8.21",
  "serde",
- "sov-modules-api 0.3.0",
- "sov-state 0.3.0",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
 ]
 
 [[package]]
 name = "sov-universal-wallet"
 version = "0.1.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "alloy-dyn-abi",
  "alloy-primitives",
@@ -5181,7 +5208,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.10.9",
- "sov-universal-wallet-macros 0.1.0",
+ "sov-universal-wallet-macros 0.1.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "thiserror 1.0.65",
 ]
 
@@ -5209,6 +5236,7 @@ dependencies = [
 [[package]]
 name = "sov-universal-wallet-macro-helpers"
 version = "0.1.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "bech32",
  "borsh",
@@ -5242,9 +5270,10 @@ dependencies = [
 [[package]]
 name = "sov-universal-wallet-macros"
 version = "0.1.0"
+source = "git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf#2dc745dc27bbd24d0bec30132628e3a76890afdf"
 dependencies = [
  "proc-macro2",
- "sov-universal-wallet-macro-helpers 0.1.0",
+ "sov-universal-wallet-macro-helpers 0.1.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "syn 2.0.106",
 ]
 
@@ -5305,21 +5334,21 @@ version = "0.3.0"
 dependencies = [
  "anyhow",
  "serde_json",
- "sov-address 0.3.0",
- "sov-bank 0.3.0",
+ "sov-address 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-build",
  "sov-capabilities",
- "sov-celestia-adapter 0.3.0",
+ "sov-celestia-adapter 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-evm",
  "sov-hyperlane-integration",
- "sov-kernels 0.3.0",
- "sov-mock-zkvm 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-modules-stf-blueprint 0.3.0",
+ "sov-kernels 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-mock-zkvm 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-stf-blueprint 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-paymaster",
- "sov-rollup-interface 0.3.0",
- "sov-sequencer-registry 0.3.0",
- "sov-universal-wallet 0.1.0",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-sequencer-registry 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-universal-wallet 0.1.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "stf-starter-declaration",
 ]
 
@@ -5331,24 +5360,24 @@ dependencies = [
  "borsh",
  "serde",
  "sov-accounts",
- "sov-address 0.3.0",
+ "sov-address 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-attester-incentives",
- "sov-bank 0.3.0",
- "sov-blob-storage 0.3.0",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-blob-storage 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-capabilities",
- "sov-chain-state 0.3.0",
+ "sov-chain-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-evm",
  "sov-hyperlane-integration",
- "sov-kernels 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-modules-stf-blueprint 0.3.0",
+ "sov-kernels 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-stf-blueprint 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-operator-incentives",
  "sov-paymaster",
  "sov-prover-incentives",
  "sov-revenue-share",
- "sov-rollup-interface 0.3.0",
- "sov-sequencer-registry 0.3.0",
- "sov-state 0.3.0",
+ "sov-rollup-interface 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-sequencer-registry 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
  "sov-uniqueness",
  "strum 0.26.3",
  "tracing",
@@ -5836,9 +5865,9 @@ dependencies = [
  "borsh",
  "schemars 0.8.21",
  "serde",
- "sov-bank 0.3.0",
- "sov-modules-api 0.3.0",
- "sov-state 0.3.0",
+ "sov-bank 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-modules-api 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
+ "sov-state 0.3.0 (git+https://github.com/Sovereign-Labs/sovereign-sdk.git?rev=2dc745dc27bbd24d0bec30132628e3a76890afdf)",
 ]
 
 [[package]]
