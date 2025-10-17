@@ -50,7 +50,13 @@ cd rollup-starter
 $ make clean-db
 ```
 
-### 3. Start the rollup node:
+### 3. Spin up a Sequencer Postgres DB
+```bash,test-ci
+docker run --name postgres -e POSTGRES_PASSWORD=sequencerdb -p 5432:5432 -d --restart=always postgres
+docker exec postgres psql -U postgres -c 'CREATE DATABASE rollup;'
+```
+
+### 4. Start the rollup node:
 
 ```bash,test-ci,bashtestmd:long-running,bashtestmd:wait-until=rest_address
 $ cargo run
