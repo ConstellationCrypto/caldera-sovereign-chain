@@ -10,6 +10,7 @@ freeze = [1, 1]
 # We use the ID 4321 for demo purposes. Change this value before deploying!
 CHAIN_ID = 6669
 CHAIN_NAME = "TestChain"
+EVM_GAS_METERING_MODE = "Rollup"
 # We will keep only this many blocks in the EVM module.
 EVM_BLOCK_PRUNING_THRESHOLD = 100000
 # How many rollup blocks to wait before terminating setup mode. While setup mode is enabled,
