@@ -51,7 +51,7 @@ where
 
         let axum_router = Self::default().0.rest_api(api_state.clone());
         // Provide an endpoint to return dedup information associated with addresses.
-        // Since our runtime is using the uniqueness module, we can use the provided `NonceDeDupEndpoint` implementation.
+        // Since our runtime is using the uniqueness module, we can use the provided `SovereignDeDupEndpoint` implementation.
         let dedup_endpoint = SovereignDeDupEndpoint::new(api_state.clone());
         let axum_router = axum_router.merge(dedup_endpoint.axum_router());
         let axum_router = axum_router.merge(sov_rollup_apis::endpoints::constants::axum_router());

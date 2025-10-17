@@ -39,13 +39,47 @@ start-celestia:
 stop-celestia:
 	$(compose_down)
 
+start-hyperlane-ethtest:
+	@echo "Starting hyperlane ethtest docker compose..."
+	mkdir -p ./hyperlane/docker-data/relayer ./hyperlane/docker-data/validator-ethtest/signatures && chmod -R 777 ./hyperlane/docker-data
+	cd hyperlane && docker compose -f docker-compose.hyp-evm.yml up --build --force-recreate -d --quiet-pull
+	@echo "waiting for containers to become operational (timeout: 300 seconds)..."
+	@start_time=$$(date +%s); \
+	timeout_seconds=300; \
+	while true; do \
+		timestamp=$$(date '+%Y-%m-%d %H:%M:%S'); \
+		current_time=$$(date +%s); \
+		elapsed=$$((current_time - start_time)); \
+		validator_health=$$(docker inspect --format='{{.State.Health.Status}}' hyperlane-validator-ethtest-1 2>/dev/null || echo "not found"); \
+		relayer_health=$$(docker inspect --format='{{.State.Health.Status}}' hyperlane-relayer-1 2>/dev/null || echo "not found"); \
+		echo "[$$timestamp] Health check - validator: '$$validator_health', relayer: '$$relayer_health' (elapsed: $${elapsed}s)"; \
+		if [ "$$validator_health" = "healthy" ] && [ "$$relayer_health" = "healthy" ]; then \
+			echo "[$$timestamp] ✔ All hyperlane containers are healthy"; \
+			break; \
+		elif [ $$elapsed -ge $$timeout_seconds ]; then \
+			echo "[$$timestamp] ✗ Timeout reached after $$timeout_seconds seconds"; \
+			exit 1; \
+		else \
+			echo "[$$timestamp] Waiting for hyperlane containers to be up and running..."; \
+		fi; \
+		sleep 3; \
+	done
+	@echo " ✔ Hyperlane ethtest containers are ready."
+
+stop-hyperlane-ethtest:
+	cd hyperlane && docker compose -f docker-compose.hyp-evm.yml down
+
 clean: ## Clean up all docker compose resources
 	@if docker info >/dev/null 2>&1; then \
 		echo "Cleaning up all docker compose resources..."; \
 		$(compose_down) --volumes --remove-orphans 2>/dev/null || true; \
+		docker compose -f hyperlane/docker-compose.hyp-evm.yml down --volumes --remove-orphans  2>/dev/null || true; \
 		echo "Removing any dangling images..."; \
 		docker image prune -f 2>/dev/null || true; \
 		echo "Docker compose cleanup complete."; \
 	else \
 		echo "Docker is not running. Skipping integrations cleanup."; \
 	fi
+	rm -rf hyperlane/docker-data/*
+	rm -rf hyperlane/configs/chains/ethtest/addresses.yaml
+	rm -rf hyperlane/configs/deployments/*
