@@ -1,3 +1,18 @@
+{{/* What is this file
+
+Some values are compiled directly into the binary that runs the rollup state transition.
+A subset of those values are unique to the chain they run such as chain id and name.
+
+This file, previously a plain toml, is transformed into a template to be loaded and filled
+at build time for a rollup.  This will facilitate just-in-time builds for each sovereign rollup
+and their unique binaries with these unique values.
+
+The templated values are not the end-all-be-all here though, and values may need to be tweaked after
+the initial deployment, so this templating will only ocurr at the very start, with the result being
+stored in s3 to be tuned for future builds if need be
+
+ */}}
+
 [gas.Bank]
 create_token = [4, 4]
 transfer = [5, 5]
@@ -8,8 +23,8 @@ freeze = [1, 1]
 
 [constants]
 # We use the ID 4321 for demo purposes. Change this value before deploying!
-CHAIN_ID = 6669
-CHAIN_NAME = "TestChain"
+CHAIN_ID = {{ .rollup_chain_id }}
+CHAIN_NAME = "{{ .rollup_name }}"
 EVM_GAS_METERING_MODE = "Rollup"
 # We will keep only this many blocks in the EVM module.
 EVM_BLOCK_PRUNING_THRESHOLD = 100000
@@ -137,7 +152,7 @@ ELASTICITY_MULTIPLIER = 2
 # --- End Gas fee adjustment parameters ---
 
 # --- Hyperlane constants ---
-HYPERLANE_BRIDGE_DOMAIN = 5555
+HYPERLANE_BRIDGE_DOMAIN = {{ .hyperlane_bridge_domain }}
 # --- End Hyperlane constants ---
 
 BANK_DISCRIMINANT = 0
